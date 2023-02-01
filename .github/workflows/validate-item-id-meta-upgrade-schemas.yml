@@ -21,7 +21,7 @@ jobs:
       run: |
         exit_code=0
 
-        for i in $(ls nbt_upgrade_schema); do
+        for i in $(ls id_meta_upgrade_schema); do
           ajv validate -s id_meta_upgrade_schema_schema.json -d id_meta_upgrade_schema/$i || exit_code=1
         done
 
